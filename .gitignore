@@ -1,0 +1,14 @@
+/html
+/bin
+*~
+*#
+.#*
+*.o
+/sgclient/sgclient
+/sgserver/sgserver
+*.user
+*.autosave
+*.tar.gz
+Makefile
+moc_*
+ui_*
