@@ -6,6 +6,7 @@
 *.o
 /sgclient/sgclient
 /sgserver/sgserver
+/tests/tests
 *.user
 *.autosave
 *.tar.gz

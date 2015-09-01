@@ -9,9 +9,10 @@
 #define TEXT_CONNECTED "Connected"
 #define TEXT_NOT_CONNECTED "Not connected"
 
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+MainWindow::MainWindow(ClientInstance_t *Instance, QWidget *parent) :
+  QMainWindow(parent),
+  ClientInstance(Instance),
+  ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 }
@@ -26,7 +27,7 @@ MainWindow::~MainWindow()
 */
 void MainWindow::on_ConnectButton_clicked()
 {
-    bool Connected = sgClient();
+    bool Connected = sgClient(ClientInstance);
 
     ui->StatusField->setStyleSheet(
       Connected ? STYLESHEET_CONNECTED : STYLESHEET_NOT_CONNECTED);

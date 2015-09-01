@@ -3,10 +3,10 @@
 ######################################################################
 
 TEMPLATE = subdirs
-SUBDIRS = sgserver sgclient
+SUBDIRS = sgserver sgclient tests
 
 dox.target = doc
 dox.commands = doxygen Doxyfile_sg
-dox.depends = sgserver sgclient
+dox.depends = sgserver sgclient tests
 
 QMAKE_EXTRA_UNIX_TARGETS += dox

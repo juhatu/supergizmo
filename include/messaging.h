@@ -42,9 +42,9 @@ static inline size_t sgSimpleMessage(char *Buffer, const uint8_t MsgId,
     {
       Msg->MsgId = MsgId;
       Msg->MsgLen = Data ? Len : 0;
-      Written = sizeof(SgSimpleMsg_t);
+      Written = sizeof(*Msg);
 
-      memcpy(Msg + Written, Data, Msg->MsgLen);
+      memcpy(&Buffer[Written], Data, Msg->MsgLen);
 
       Written += Msg->MsgLen;
     }

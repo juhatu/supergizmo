@@ -16,5 +16,8 @@ INCLUDEPATH += . ../include
 INSTALLS += target
 
 # Input
-HEADERS += sgserver_priv.h
-SOURCES += sgserver.cc
+HEADERS += ../include/sgserver.h
+SOURCES += main.cc sgserver.cc
+
+QMAKE_CFLAGS += -Wall -Wextra -Werror -pedantic
+QMAKE_CXXFLAGS += -Wall -Wextra -Werror -pedantic

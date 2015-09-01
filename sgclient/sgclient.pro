@@ -18,7 +18,12 @@ QT = core gui widgets
 INSTALLS += target
 
 # Input
-HEADERS += sgclient.h mainwindow.h
-SOURCES += sgclient.cc mainwindow.cpp
+HEADERS += ../include/sgclient.h mainwindow.h
+SOURCES += main.cc sgclient.cc mainwindow.cpp
 
 FORMS += mainwindow.ui
+
+CONFIG += c++11
+
+QMAKE_CFLAGS += -Wall -Wextra -Werror -pedantic
+QMAKE_CXXFLAGS += -Wall -Wextra -Werror -pedantic
